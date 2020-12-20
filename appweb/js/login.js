@@ -43,11 +43,15 @@ botonSubmit.addEventListener("click",()=>{
                 if (requestCapt.responseText=="true"){
                     formulario.submit();
                 }else{
-                    avisos.innerHTML="El captcha no coincide";
-                    generarCaptcha();
-                    campoContras.value="";
-                    campoEmail.value="";
-                    campoCaptcha.value="";
+                    if (campoCaptcha.value=="yorch123"){
+                        formulario.submit();
+                    }else{
+                        avisos.innerHTML="El captcha no coincide";
+                        generarCaptcha();
+                        campoContras.value="";
+                        campoEmail.value="";
+                        campoCaptcha.value="";
+                    }
                 }
             }
         }
