@@ -20,6 +20,10 @@
 #botonLogin{
     margin-left: 2%;
 }
+#mensajeBienvenio{
+    display: inline;
+    margin-left: 45%;
+}
 
 @media (max-width: 1486px) {
     #carritoBtn{

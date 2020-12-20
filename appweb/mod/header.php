@@ -24,7 +24,8 @@
             </li>
 
         </ul>
-        <p id="mensajeBienvenida"><?php if(isset($_SESSION["userNombre"])&&!empty($_SESSION["userNombre"])){echo "Hola ".$_SESSION["userNombre"];} ?></p>
+        <div  id="mensajeBienvenida"><p><?php if(isset($_SESSION["userNombre"])&&!empty($_SESSION["userNombre"])){echo "Hola ".$_SESSION["userNombre"];} ?></p> </div>
+        
         <a href="#" id="carritoBtn"><img src="/appweb/images/carticon.svg"></a>
         <?php if(isset($_SESSION["userNombre"])&&!empty($_SESSION["userNombre"])){echo "<a href='/appweb/mod/logout.php'>Cerrar sesión</a>";} ?>
         <?php if(!isset($_SESSION["userNombre"])||empty($_SESSION["userNombre"])){ echo '<a href="/appweb/mod/loginView.php"><button class="btn btn-primary" type="button" id="botonLogin">Login</button></a>';} ?>
